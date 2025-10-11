@@ -1,4 +1,4 @@
-## Distance-Aware Pruned Graphs for Accurate and Efficient Approximate Nearest Neighbor Search (Submitted to VLDB 2026)
+## DAPG: A Distance-Aware Pruned Graph Framework for Fast and Accurate Approximate Nearest Neighbor Search
 ![Views](https://komarev.com/ghpvc/?username=solmazsm&label=Views&color=blue)
 
 > **Distance-Aware Pruned Graphs for Accurate and Efficient Approximate Nearest Neighbor Search**  
