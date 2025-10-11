@@ -250,10 +250,4 @@ This allows robust analysis of recall and efficiency across diverse search setti
 
 For questions or contributions, please open an issue or contact the authors listed in the paper.
 
-**Modified and Authored by:**  
-**Solmaz Seyed Monir**, Ph.D. Student  
-**Professor Dongfang Zhao**, Advisor  
-Affiliation: Database Research Group, University of Washington  
-Date: **2025-08-01**  
-Affected Files: `divgraph.cpp`, `Node2`, `insertLSHRefine`, `README.md`
 
