@@ -1,1 +1,232 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DAPG: Distance-Aware Pruned Graph for Fast & Accurate ANN</title>
+  <meta name="description" content="Project page for DAPG: Distance-Aware Pruned Graph framework for ANN search." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --card:#101217;
+      --muted:#9aa4ad;
+      --text:#e6edf3;
+      --brand:#6bb3ff;
+      --brand-2:#a6ffb7;
+      --border:#202635;
+      --accent:#202a3c;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    }
+    @media (prefers-color-scheme: light) {
+      :root{ --bg:#f8fafc; --card:#ffffff; --muted:#5b6470; --text:#0d1220; --border:#e6eaf0; --accent:#eef3ff; --shadow:0 6px 18px rgba(16,24,40,.08); }
+    }
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family:var(--sans); }
+    a{ color:var(--brand); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .wrap{ max-width:1100px; margin:0 auto; padding:28px; }
+    .hero{ display:grid; gap:20px; padding:26px; border:1px solid var(--border); background:linear-gradient(180deg,var(--card),transparent), var(--card); border-radius:var(--radius); box-shadow:var(--shadow); }
+    .badge{ display:inline-flex; align-items:center; gap:8px; color:var(--muted); background:var(--accent); border:1px solid var(--border); padding:6px 10px; border-radius:999px; font-size:12px }
+    h1{ font-size: clamp(28px, 5vw, 42px); margin:6px 0 2px }
+    .subtitle{ color:var(--muted); font-size:16px; margin:0 0 8px }
+    .authorline{ display:flex; flex-wrap:wrap; gap:10px; color:var(--muted) }
+    .cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px }
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--text); font-weight:600 }
+    .btn.brand{ background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#0a0c10; border-color:transparent }
+    .btn:hover{ text-decoration:none; filter:brightness(1.05) }
+    .grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:20px }
+    @media (max-width: 920px){ .grid{ grid-template-columns:1fr } }
+    .teaser{ border:1px solid var(--border); background:var(--card); border-radius:var(--radius); overflow:hidden; }
+    .teaser img{ width:100%; display:block }
+    .card{ border:1px solid var(--border); background:var(--card); border-radius:var(--radius); padding:18px }
+    .card h3{ margin:0 0 10px; font-size:18px }
+    .muted{ color:var(--muted) }
+    .kpi{ display:flex; gap:18px; flex-wrap:wrap; margin-top:6px }
+    .kpi .pill{ background:var(--accent); border:1px solid var(--border); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--muted) }
+    .section{ margin-top:28px }
+    .two{ display:grid; grid-template-columns:1fr 1fr; gap:18px }
+    @media (max-width: 820px){ .two{ grid-template-columns:1fr } }
+    pre, code{ font-family:var(--mono); }
+    pre{ margin:0; padding:14px; overflow:auto; background:var(--accent); border:1px solid var(--border); border-radius:12px }
+    details{ border:1px dashed var(--border); border-radius:12px; padding:12px 14px; background:var(--card) }
+    details[open]{ border-style:solid }
+    table{ width:100%; border-collapse:collapse; overflow:hidden; border-radius:12px; border:1px solid var(--border) }
+    th, td{ padding:10px 12px; border-bottom:1px solid var(--border); text-align:left; font-size:14px }
+    tr:hover td{ background:var(--accent) }
+    footer{ opacity:.8; color:var(--muted); margin:26px 0 8px; font-size:13px }
+    .hr{ height:1px; background:var(--border); margin:24px 0 }
+    .codecopy{ position:relative }
+    .copybtn{ position:absolute; top:8px; right:8px; font-size:12px; padding:6px 8px; border-radius:8px; border:1px solid var(--border); background:var(--card); color:var(--muted); cursor:pointer }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <span class="badge">📄 Project Page • <span>Last updated: <span id="ts"></span></span></span>
+      <h1>DAPG: Distance-Aware Pruned Graph for Fast & Accurate ANN</h1>
+      <p class="subtitle">A single-layer, geometry-aware pruning framework that builds compact, high-recall proximity graphs without hierarchical routing.</p>
+
+      <div class="authorline">
+        <span><a href="#">FIRST AUTHOR</a></span> ·
+        <span><a href="#">SECOND AUTHOR</a></span> ·
+        <span><a href="#">THIRD AUTHOR</a></span>
+        <span class="muted">(&nbsp;<a href="#">AFFILIATION 1</a>, <a href="#">AFFILIATION 2</a>&nbsp;)</span>
+      </div>
+
+      <div class="cta">
+        <a class="btn brand" href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">📑 Paper (arXiv)</a>
+        <a class="btn" href="https://github.com/USER/Distance-Aware-Pruned-Graph" target="_blank">💻 Code (GitHub)</a>
+        <a class="btn" href="#bibtex">📚 BibTeX</a>
+        <a class="btn" href="#results">📈 Results</a>
+        <a class="btn" href="#faq">❓ FAQ</a>
+      </div>
+
+      <div class="grid">
+        <div class="teaser">
+          <!-- Replace with your teaser image -->
+          <img src="assets/teaser.png" alt="DAPG teaser: geometry-aware pruning and query flow">
+        </div>
+        <div class="card">
+          <h3>Abstract</h3>
+          <p class="muted">
+            DAPG introduces percentile-based local filtering and adaptive global sparsification to build
+            degree-adaptive proximity graphs that preserve reachability while reducing redundant edges.
+            DAPG improves latency–recall trade-offs over strong baselines without multi-layer indexing.
+          </p>
+          <div class="kpi">
+            <span class="pill">+3.3% recall</span>
+            <span class="pill">2.9× faster</span>
+            <span class="pill">Single layer</span>
+            <span class="pill">LSH seeding compatible</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK LINKS -->
+    <div class="section two">
+      <div class="card">
+        <h3>TL;DR</h3>
+        <p class="muted">
+          Fixed-degree pruning mismatches local density; percentile thresholds + adaptive caps fix it, yielding sparse graphs and fast queries.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Highlights</h3>
+        <ul class="muted">
+          <li>Local percentile threshold <code>&tau;<sub>v</sub></code> + adaptive cap <code>T'</code>.</li>
+          <li>Cost model: <code>C<sub>Q</sub> = O(&macr;d<sub>DAPG</sub>&nbsp;β(ℓ))</code>.</li>
+          <li>Plug-and-play atop LSH seeding; no hierarchy.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- INSTALL / RUN -->
+    <div class="section two">
+      <div class="card">
+        <h3>Build</h3>
+        <div class="codecopy">
+          <button class="copybtn" data-target="code1">Copy</button>
+          <pre id="code1"><code>cd cppCode/DAPG
+make</code></pre>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Run</h3>
+        <div class="codecopy">
+          <button class="copybtn" data-target="code2">Copy</button>
+          <pre id="code2"><code>./dapg sift   # expects dataset/sift.data_new</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="results" class="section card">
+      <h3>Results (Top-k Recall vs Latency)</h3>
+      <p class="muted">Numbers here are placeholders—swap with your table image or CSV-to-HTML.</p>
+      <table>
+        <thead>
+          <tr><th>Dataset</th><th>Method</th><th>Recall@10</th><th>QPS / Latency</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SIFT1M</td><td>DAPG</td><td>0.992</td><td>2.9× faster</td><td>p=0.8, T'=48</td></tr>
+          <tr><td>SIFT1M</td><td>Baseline</td><td>0.960</td><td>1.0×</td><td>—</td></tr>
+          <tr><td>DEEP1M</td><td>DAPG</td><td>0.985</td><td>1.8× faster</td><td>p=0.85</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- METHOD IMAGE / PIPELINE -->
+    <div class="section two">
+      <div class="card">
+        <h3>Method Overview</h3>
+        <p class="muted">Local percentile thresholds adapt to density; global caps bound branching; LSH seeds initialize search.</p>
+        <img src="assets/pipeline.png" alt="DAPG pipeline diagram" style="width:100%; border:1px solid var(--border); border-radius:12px;">
+      </div>
+      <div class="card">
+        <h3>Cost Model</h3>
+        <p class="muted">Expected query cost factorizes into average degree and expansion depth.</p>
+        <pre><code>C_Q = O(&macr;d_DAPG · β(ℓ))
+T_Q = O(d · &macr;d_DAPG · β(ℓ))
+β(ℓ) = O(log n) under small-world routing</code></pre>
+      </div>
+    </div>
+
+    <!-- BIBTEX -->
+    <div id="bibtex" class="section card">
+      <h3>BibTeX</h3>
+      <details>
+        <summary class="muted">Click to show</summary>
+        <pre><code>@inproceedings{YOURKEY2026dapg,
+  title   = {DAPG: A Distance-Aware Pruned Graph Framework for Fast and Accurate Approximate Nearest Neighbor Search},
+  author  = {Your, Name and Coauthor, Name and Another, Name},
+  booktitle = {Proceedings of the ACM SIGMOD},
+  year    = {2026},
+  url     = {https://github.com/USER/Distance-Aware-Pruned-Graph},
+}</code></pre>
+      </details>
+    </div>
+
+    <!-- FAQ -->
+    <div id="faq" class="section two">
+      <div class="card">
+        <h3>FAQ</h3>
+        <p><strong>Does DAPG require a hierarchy?</strong> No—single layer with geometry-aware pruning.</p>
+        <p><strong>Can I swap the LSH backend?</strong> Yes—β(ℓ) is backend-dependent; plug in your LSH family.</p>
+        <p><strong>How do I pick <code>p</code> and <code>T'</code>?</strong> Start with <code>p∈[0.6,0.9]</code>, <code>T'≈</code>post-local avg degree.</p>
+      </div>
+      <div class="card">
+        <h3>Contact</h3>
+        <p class="muted">Open an issue or email <a href="mailto:you@example.com">you@example.com</a>.</p>
+        <div class="hr"></div>
+        <p class="muted">Code: <a href="https://github.com/USER/Distance-Aware-Pruned-Graph">GitHub</a> · Paper: <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv</a></p>
+      </div>
+    </div>
+
+    <footer>© 2026 DAPG Authors. Built for GitHub Pages.</footer>
+  </div>
+
+  <script>
+    // pretty timestamp
+    document.getElementById('ts').textContent = new Date().toLocaleDateString();
+    // copy buttons
+    document.querySelectorAll('.copybtn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const id = btn.getAttribute('data-target');
+        const code = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(code).then(()=>{
+          btn.textContent='Copied!';
+          setTimeout(()=>btn.textContent='Copy',1200);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
