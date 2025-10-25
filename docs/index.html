@@ -134,27 +134,29 @@
       </div>
     </section>
 
+  
+<!-- QUICK LINKS -->
+<div class="section two">
+  <div class="card">
+    <h3>Summary</h3>
+    <p class="muted">
+      Fixed-degree pruning assumes uniform neighborhood sizes, disregarding spatial density variations and causing suboptimal graph connectivity. DAPG introduces a percentile-based local filtering mechanism that dynamically determines edge retention per node and an adaptive global sparsification policy that caps high-degree outliers. These mechanisms produce degree-stable, path-connected proximity graphs that preserve navigability while reducing redundant edges, resulting in lower traversal cost and improved recall–latency efficiency.
+    </p>
+  </div>
 
-   
-    <!-- QUICK LINKS -->
-    <div class="section two">
-      <div class="card">
-         <h3>Summary</h3>
-  <p class="muted">
-    Fixed-degree pruning imposes uniform neighborhood sizes, disregarding spatial density variations and causing suboptimal graph connectivity. DAPG introduces a percentile-based local filtering mechanism that dynamically determines edge retention per node and an adaptive global sparsification policy that caps high-degree outliers. These mechanisms produce degree-stable, path-connected proximity graphs that preserve navigability while reducing redundant edges, resulting lower traversal cost and improved recall–latency efficiency.
-  </p>
-      </div>
-     <div class="section two">
-  <div class="card" style="grid-column: 1 / -1;">
-    <h3>Highlights</h3>
-    <ul class="muted">
-      <li>Local percentile threshold <code>&tau;<sub>v</sub></code> + adaptive cap <code>T'</code>.</li>
-      <li>Cost model: <code>C<sub>Q</sub> = O(&macr;d<sub>DAPG</sub>&nbsp;β(ℓ))</code>.</li>
-      <li>LSH seeding; no hierarchy.</li>
-      <li>Supports dynamic insertion and deletion with degree-stable connectivity.</li>
-    </ul>
+  <div class="section two">
+    <div class="card" style="grid-column: 1 / -1;">
+      <h3>Highlights</h3>
+      <ul class="muted">
+        <li>Local percentile threshold <code>&tau;<sub>v</sub></code> + adaptive cap <code>T'</code>.</li>
+        <li>Cost model: <code>C<sub>Q</sub> = O(&macr;d<sub>DAPG</sub>&nbsp;β(ℓ))</code>.</li>
+        <li>LSH seeding; no hierarchy.</li>
+        <li>Supports dynamic insertion and deletion with degree-stable connectivity.</li>
+      </ul>
+    </div>
   </div>
 </div>
+
 
     <!-- INSTALL / RUN -->
     <div class="section two">
