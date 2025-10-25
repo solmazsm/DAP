@@ -88,11 +88,19 @@
       </div>
 
       <div class="grid">
-        <div class="teaser">
-          <!-- teaser image -->
-          <img src="https://raw.githubusercontent.com/solmazsm/DAP/main/docs/DAPG.jpg" alt="DAPG teaser: geometry-aware pruning and query flow">
+        <div class="teaser" style="text-align:center;">
+  <!-- teaser image -->
+  <img src="https://raw.githubusercontent.com/solmazsm/DAP/main/docs/DAPG.jpg"
+       alt="DAPG teaser: geometry-aware pruning and query flow"
+       style="width:80%; max-width:700px; border-radius:12px; margin-bottom:10px;">
 
-        </div>
+  <p class="muted" style="font-size:14px; line-height:1.5; max-width:800px; margin:auto;">
+    <strong>Figure:</strong> The DAPG index structure for object set <em>O</em>. DAPG maintains a single adaptive layer where each node
+    <em>o<sub>i</sub></em> keeps only nearby edges under its local percentile threshold
+    <em>τ<sub>o<sub>i</sub></sub></em>. This provides a sparse but path-connected graph supporting dynamic insertion and deletion.
+  </p>
+</div>
+
         <div class="card">
           <h3>Abstract</h3>
           <p class="muted">
