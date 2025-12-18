@@ -171,7 +171,7 @@ Each row logs detailed metrics:
 
 All data in this file was automatically logged during batch experiments executed using the modified `main()` function in `cppCode/LSH-APG/src`.
 
-These results validate the effectiveness of our DAPG method, as submitted in the VLDB 2026 paper.
+These results validate the effectiveness of our DAPG method.
 
 
 ### Experimental Results Log
